@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 type PropsType = {
     on: boolean
     onChange: (on: boolean) => void
 }
 
-function UncontrolledOnOff (props: PropsType) {
+export function OnOff (props: PropsType) {
     console.log("UncontrolledOnOff rendering")
 
     console.log("on: " + props.on)
@@ -45,5 +45,4 @@ function UncontrolledOnOff (props: PropsType) {
         </div>
     )
 }
-
-export default UncontrolledOnOff;
+export const OnOffMemo = React.memo(OnOff)

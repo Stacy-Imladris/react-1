@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-import Accordion from "./components/Accordion/Accordion";
-import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import OnOff from "./components/OnOff/OnOff";
+import {Rating, RatingMemo, RatingValueType} from "./components/Rating/Rating";
+import {UncontrolledRating, UncontrolledRatingMemo} from "./components/UncontrolledRating/UncontrolledRating";
+import {AccordionMemo} from "./components/Accordion/Accordion";
+import {UncontrolledOnOff, UncontrolledOnOffMemo} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {OnOffMemo} from "./components/OnOff/OnOff";
+import {UncontrolledAccordionMemo} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 function App(props: any) {
     console.log("App rendering")
@@ -15,17 +16,18 @@ function App(props: any) {
 
     return (
         <div className={"App"}>
-            {/*<OnOff on={switchOn}
-                   onChange={(on) => {setSwitchOn(on)}}/>*/}
+            <OnOffMemo on={switchOn}
+                   onChange={(on) => {setSwitchOn(on)}}/>
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
-            <Rating value={ratingValue}
+            <RatingMemo value={ratingValue}
                     onClick={setRatingValue}/>
-            <UncontrolledRating/>
-            <Accordion titleValue={"Menu"}
+            <UncontrolledRatingMemo onChange={()=>{}} />
+            <AccordionMemo titleValue={"Menu"}
                        collapsed={accordionCollapsed}
-                       onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>
-            {/*<UncontrolledOnOff />
-            <UncontrolledAccordion titleValue={"Menu"}/>*/}
+                       onChange={() => setAccordionCollapsed(!accordionCollapsed)}
+            items={[]} onClick={()=>{}}/> {/*заглушка! требует пропсы (для истории нужны)*/}
+            {/*<UncontrolledOnOffMemo />*/}
+            <UncontrolledAccordionMemo titleValue={"Menu"}/>
             {/*<Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
