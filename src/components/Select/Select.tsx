@@ -1,9 +1,14 @@
 import React, {useState, KeyboardEvent, useEffect} from "react";
 import styles from './Select.module.css';
 
-type ItemType = {
+export type ItemType = {
     title: string
     value: any
+    country?: string
+    /**
+     * Parameter that tell is population over 10 000 000 people or not
+     */
+    largePopulation?: boolean
 }
 
 type SelectPropsType = {

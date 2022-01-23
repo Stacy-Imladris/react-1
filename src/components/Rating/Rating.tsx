@@ -4,6 +4,10 @@ export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 type RatingPropsType = {
     value: RatingValueType
+    /**
+     * Callback that is called when any star clicked
+     * @param value is value of clicked star
+     */
     onClick: (value: RatingValueType) => void
 }
 
