@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
 export const WithValue: ComponentStory<typeof Select> = (args) => {
     const [value, setValue] = useState('2');
-    return <>
+    return <div style={{display: "inline-block"}}>
         <Select value={value}
                 onChange={setValue}
                 items={[
@@ -23,7 +23,7 @@ export const WithValue: ComponentStory<typeof Select> = (args) => {
                     {value: '2', title: "Moscow"},
                     {value: '3', title: "Kiev"}
                 ]}/>
-    </>
+    </div>
 }
 
 export const WithoutValue: ComponentStory<typeof Select> = (args) => {
@@ -80,8 +80,10 @@ export const HelpsToReactMemo = () => {
         <button onClick={() => setCounter(counter + 1)}>+</button>
         <button onClick={addCity}>add city</button>
         {counter}
-        <SelectMemo items={selectLetterN}/>
-        <SelectMemo items={selectUSA}/>
-        <SelectMemo items={selectLargePopulation}/>
+        <div style={{display: 'flex', width: '35%', justifyContent: 'space-between'}}>
+            <SelectMemo items={selectLetterN}/>
+            <SelectMemo items={selectUSA}/>
+            <SelectMemo items={selectLargePopulation}/>
+        </div>
     </>
 }
