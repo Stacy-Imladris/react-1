@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingMemo, RatingValueType} from "./components/Rating/Rating";
-import {UncontrolledRating, UncontrolledRatingMemo} from "./components/UncontrolledRating/UncontrolledRating";
-import {AccordionMemo} from "./components/Accordion/Accordion";
-import {UncontrolledOnOff, UncontrolledOnOffMemo} from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import {OnOffMemo} from "./components/OnOff/OnOff";
-import {UncontrolledAccordionMemo} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {RatingMemo, RatingValueType} from './components/Rating/Rating';
+import {UncontrolledRatingMemo} from './components/UncontrolledRating/UncontrolledRating';
+import {AccordionMemo} from './components/Accordion/Accordion';
+import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff';
+import {OnOffMemo} from './components/OnOff/OnOff';
+import {UncontrolledAccordionMemo} from './components/UncontrolledAccordion/UncontrolledAccordion';
 
 function App(props: any) {
     console.log("App rendering")

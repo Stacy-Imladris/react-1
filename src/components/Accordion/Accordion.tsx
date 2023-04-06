@@ -5,7 +5,7 @@ type ItemType = {
     value: any
 }
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onChange: () => void

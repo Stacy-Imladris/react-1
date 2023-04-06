@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import {Accordion} from "./Accordion";
+import {Accordion} from './Accordion';
 import {action} from "@storybook/addon-actions";
 
 const GetCategoryObj = (categoryName: 'Colors' | 'Events' | 'Main') => ({
@@ -71,4 +71,3 @@ ModeChanging.args = {
         {title: 'Alice', value: 3},
         {title: 'Tanya', value: 4}]
 }
-// @ts-ignore
